@@ -4,9 +4,16 @@
 The project contains a Stateless Widget which displays greeting message using a
 variable and a Stateful Widget which works like a counter.
 
+### Table of Contents
+**[Main Widget](#main)**<br>
+**[Stateless Widget](#stateless-widget)**<br>
+**[Stateful Widget](#stateful-widget)**<br>
+**[Screenshots](#screenshots)**<br>
+**[Dependencies](#dependencies)**<br>
+**[Widget Tree](#widget-tree)**<br>
 
 
-## Main
+### Main
 Here is the main function:
 ```dart
 import 'package:flutter/material.dart';
@@ -120,3 +127,50 @@ Stateless                          |  Statefull
 ### Dependencies
 Project depends on **Pacifico** font and **add.png** image.
 
+### Widget Tree
+Main Widget:
+```javascript
+MaterialApp
+  └─ Scaffold
+      ├─ AppBar
+      │    └─ Center
+      │         └─ Text
+      │              └─ 'Stateful vs Stateless'
+      └─ Body
+           └─ Widget (Assumed Custom Widget)
+```
+Stateless Widget:
+```javascript
+Greeting
+  └─ Container
+      ├─ padding: EdgeInsets.all(16.0)
+      └─ Center
+           └─ Text
+                ├─ 'msg' (Dynamic content)
+                └─ style: TextStyle
+                     ├─ color: Colors.teal
+                     ├─ fontSize: 40.0
+                     ├─ fontWeight: FontWeight.bold
+                     └─ fontFamily: 'Pacifico'
+```
+Stateful Widget:
+```javascript
+Counter
+  └─ _CounterState
+       ├─ i: 0
+       └─ build: Center
+            └─ Row
+                 ├─ Text
+                 │    └─ 'Counter: $i'
+                 │         └─ style: TextStyle
+                 │              ├─ fontSize: 40.0
+                 │              └─ fontWeight: FontWeight.bold
+                 ├─ SizedBox
+                 │    └─ height: 16.0
+                 └─ TextButton
+                      ├─ onPressed: increment()
+                      └─ child: Image.asset
+                           ├─ 'images/add.png'
+                           ├─ width: 30.0
+                           └─ height: 30.0
+```
