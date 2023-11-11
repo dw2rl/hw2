@@ -117,3 +117,6 @@ Stateless                          |  Statefull
 :-------------------------:|:-------------------------:
 ![image](https://github.com/dw2rl/hw2/assets/105518343/2cc361b0-5a5a-45e2-87ba-8d3da2ca7ed2) |  ![image](https://github.com/dw2rl/hw2/assets/105518343/4d8a16e0-2cf1-4e75-a9de-f4fdde3ad7f5)
 
+### Dependencies
+Project depends on **Pacifico** font and **add.png** image.
+
