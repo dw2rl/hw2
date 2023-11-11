@@ -173,4 +173,7 @@ Counter
                            ├─ 'images/add.png'
                            ├─ width: 30.0
                            └─ height: 30.0
+                           └─ increment
+                                └─ setState
+                                     └─ i++
 ```
